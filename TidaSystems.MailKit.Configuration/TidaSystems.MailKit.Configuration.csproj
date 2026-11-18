@@ -9,7 +9,7 @@
 		<EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
 		<Authors>TidaSystems</Authors>
 		<PackageProjectUrl>https://tida.website</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/TidaSystems/MailKit.Configuration</RepositoryUrl>
+		<RepositoryUrl>https://github.com/Tida-System/MailKit.Configuration</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
