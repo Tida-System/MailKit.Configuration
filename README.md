@@ -1,6 +1,6 @@
 # TidaSystems.MailKit.Configuration
 
-Configuration-driven factories for [MailKit](https://github.com/jstedfast/MailKit) SMTP, POP3, and IMAP clients in .NET 10 applications.
+Configuration-driven factories for [MailKit](https://github.com/jstedfast/MailKit) SMTP, POP3, and IMAP clients, supporting .NET 8 through .NET 11.
 
 Simplify email integration using standard .NET configuration and dependency injection. Create connected and authenticated MailKit clients, manage named sender profiles, and build MIME messages without repeating connection and configuration code.
 
@@ -20,7 +20,7 @@ Developed and maintained by [TidaSystems](https://tida.website).
 
 ## Requirements
 
-- .NET 10 or later
+- .NET 8 or later
 - An SMTP, POP3, or IMAP server, depending on the protocols used
 
 ## Installation

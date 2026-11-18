@@ -2,7 +2,9 @@
 
 These sample applications demonstrate how to use **TidaSystems.MailKit.Configuration** with SMTP, POP3, and IMAP.
 
-All samples use the library's public factories and target .NET 10. They reference the library directly through `ProjectReference` and are configured for Native AOT publishing.
+The library supports **.NET 8 through .NET 11**, while these sample applications target **.NET 10**.
+
+All samples use the library's public factories, reference the library directly through `ProjectReference`, and are configured for Native AOT publishing.
 
 ## Available Samples
 
