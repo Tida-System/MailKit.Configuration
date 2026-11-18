@@ -3,6 +3,7 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/samples/">
+    <File Path="samples/README.md" />
     <Project Path="samples/ReadImapInbox/ReadImapInbox.csproj" />
     <Project Path="samples/ReadPop3/ReadPop3.csproj" />
     <Project Path="samples/SendEmail/SendEmail.csproj" />

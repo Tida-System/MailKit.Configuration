@@ -1,21 +1,39 @@
-# Esempi .NET 10
+# .NET 10 Samples
 
-I progetti usano un `ProjectReference` diretto a `TidaSystems.MailKit.Configuration` e sono configurati per la pubblicazione Native AOT. Gli esempi SMTP, POP3 e IMAP usano le factory pubbliche della libreria senza adattarne le API.
+These sample applications demonstrate how to use **TidaSystems.MailKit.Configuration** with SMTP, POP3, and IMAP.
 
-## Configurazione sicura
+All samples use the library's public factories and target .NET 10. They reference the library directly through `ProjectReference` and are configured for Native AOT publishing.
 
-I file `appsettings.json` contengono solo host e indirizzi di esempio. Modificarli con i dati non sensibili del proprio provider e fornire le credenziali tramite variabili d'ambiente, che hanno precedenza sul JSON:
+## Available Samples
+
+| Sample                         | Description                                                                  |
+| ------------------------------ | ---------------------------------------------------------------------------- |
+| [SendEmail](SendEmail)         | Send an email with HTML and plain-text content using a named sender profile. |
+| [ReadPop3](ReadPop3)           | Retrieve the latest 10 messages from a POP3 mailbox.                         |
+| [ReadImapInbox](ReadImapInbox) | Read the latest 10 messages from an IMAP Inbox in read-only mode.            |
+
+## Configuration
+
+Each sample includes an `appsettings.json` containing example server settings.
+
+Update the server hostnames and other non-sensitive settings for your email provider.
+
+**Do not store passwords or access tokens in the repository.** Use environment variables instead:
 
 ```powershell
 $env:MailKit__Username = "user@example.com"
-$env:MailKit__Password = "password-o-app-password"
+$env:MailKit__Password = "your-app-password"
 ```
 
-In alternativa, per OAuth 2.0 impostare `MailKit__OAuthToken` al posto della password. Non salvare credenziali nei file del repository. Per SMTP, aggiornare anche gli indirizzi del profilo `MailKit:Senders:Info` in `samples/SendEmail/appsettings.json`.
+For OAuth 2.0 authentication, set `MailKit__OAuthToken` instead of the password.
 
-## Esecuzione
+Environment variables override values from `appsettings.json` when using the standard .NET configuration providers in the samples.
 
-Dalla root del repository:
+For the SMTP example, also update the `MailKit:Senders:Info` profile in `SendEmail/appsettings.json` with your sender address.
+
+## Running the Samples
+
+From the repository root, run the example you need:
 
 ```powershell
 dotnet run --project samples/SendEmail
@@ -23,15 +41,32 @@ dotnet run --project samples/ReadPop3
 dotnet run --project samples/ReadImapInbox
 ```
 
-`SendEmail` crea il messaggio dal profilo `Info` e usa `MimeKit.BodyBuilder` per includere sia la versione testuale sia quella HTML. Gli esempi POP3 e IMAP mostrano gli ultimi dieci messaggi; IMAP apre la Inbox in sola lettura.
+The **SendEmail** sample uses `MimeMessageFactory` to initialize a message from the `Info` sender profile and MimeKit's `BodyBuilder` to create HTML and plain-text content.
 
-Per verificare l'intera soluzione e la compatibilità AOT dichiarata:
+The **ReadPop3** and **ReadImapInbox** samples retrieve up to 10 messages. IMAP opens the Inbox in read-only mode.
+
+## Build and Native AOT
+
+Build the solution:
 
 ```powershell
-dotnet build TidaSystems.MailKit.Configuration.slnx
+dotnet build TidaSystems.MailKit.Configuration.slnx -c Release
+```
+
+To publish individual samples with Native AOT:
+
+```powershell
 dotnet publish samples/SendEmail -c Release -r win-x64
 dotnet publish samples/ReadPop3 -c Release -r win-x64
 dotnet publish samples/ReadImapInbox -c Release -r win-x64
 ```
 
-Sostituire `win-x64` con il runtime identifier della piattaforma di destinazione.
+Replace `win-x64` with the runtime identifier appropriate for your target platform.
+
+## Documentation
+
+For installation instructions, configuration options, and general usage, see the [main README](../README.md).
+
+For complete configuration references, advanced examples, and troubleshooting, visit the [TidaSystems MailKit.Configuration documentation](https://tida.website/documentation/mailkit-configuration).
+
+Developed by [TidaSystems](https://tida.website).
