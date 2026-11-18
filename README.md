@@ -239,3 +239,7 @@ Complete usage examples are available in the [samples](samples/README.md) direct
 ## Dependencies
 
 Built on [MailKit](https://github.com/jstedfast/MailKit) and [MimeKit](https://github.com/jstedfast/MimeKit), using standard Microsoft.Extensions configuration and dependency injection.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

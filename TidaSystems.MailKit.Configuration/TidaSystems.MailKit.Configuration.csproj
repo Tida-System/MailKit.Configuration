@@ -21,6 +21,8 @@
 		<Company>TidaSystems</Company>
 		<Description>Configure MailKit SMTP directly from appsettings.json using native MailKit property names. Supports configuration validation, automatic reload and Native AOT compatibility.</Description>
 		<PackageTags>MailKit;SMTP;Email;Configuration;appsettings;NativeAOT;TLS;OAuth2</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -29,6 +31,10 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
 		<PackageReference Include="MailKit" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>
