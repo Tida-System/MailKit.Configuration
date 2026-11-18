@@ -242,4 +242,4 @@ Built on [MailKit](https://github.com/jstedfast/MailKit) and [MimeKit](https://g
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/Tida-System/MailKit.Configuration/blob/main/LICENSE).
