@@ -16,6 +16,8 @@ Pop3ClientFactory clientFactory = host.Services.GetRequiredService<Pop3ClientFac
 using MailKit.Net.Pop3.Pop3Client client = await clientFactory.CreatePop3ClientAsync();
 int firstMessage = Math.Max(0, client.Count - 10);
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
 for (int index = firstMessage; index < client.Count; index++)
 {
     MimeMessage message = await client.GetMessageAsync(index);

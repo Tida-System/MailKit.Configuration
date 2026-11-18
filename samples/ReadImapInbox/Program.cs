@@ -1,5 +1,4 @@
 using MailKit;
-using MimeKit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TidaSystems.MailKit.Configuration;
@@ -25,6 +24,8 @@ if (firstMessage < inbox.Count)
         firstMessage,
         inbox.Count - 1,
         MessageSummaryItems.Envelope | MessageSummaryItems.Flags);
+
+    Console.OutputEncoding = System.Text.Encoding.UTF8;
 
     foreach (IMessageSummary message in messages)
     {
