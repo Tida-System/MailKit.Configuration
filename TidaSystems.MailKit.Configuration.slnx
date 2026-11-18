@@ -1,3 +1,11 @@
 <Solution>
+  <Folder Name="/Elementi di soluzione/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/ReadImapInbox/ReadImapInbox.csproj" />
+    <Project Path="samples/ReadPop3/ReadPop3.csproj" />
+    <Project Path="samples/SendEmail/SendEmail.csproj" />
+  </Folder>
   <Project Path="TidaSystems.MailKit.Configuration/TidaSystems.MailKit.Configuration.csproj" />
 </Solution>

@@ -7,6 +7,10 @@
 		<IsAotCompatible>true</IsAotCompatible>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
+		<Authors>TidaSystems</Authors>
+		<PackageProjectUrl>https://tida.website</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/TidaSystems/MailKit.Configuration</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
 	<PropertyGroup>
