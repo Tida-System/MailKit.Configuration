@@ -88,7 +88,11 @@ internal static class MailClientSetup
         X509CertificateCollection collection = [];
         foreach (CertificateFileSettings item in settings)
         {
+#if NET8_0
+            X509Certificate2 certificate = new(item.Path!, item.Password, X509KeyStorageFlags.EphemeralKeySet);
+#else
             X509Certificate2 certificate = X509CertificateLoader.LoadPkcs12FromFile(item.Path!, item.Password, X509KeyStorageFlags.EphemeralKeySet);
+#endif
             try
             {
                 ownCertificate(certificate);
