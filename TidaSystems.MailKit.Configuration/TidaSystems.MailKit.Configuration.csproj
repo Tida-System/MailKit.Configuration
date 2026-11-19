@@ -15,7 +15,7 @@
 		<EnablePackageValidation>true</EnablePackageValidation>
 		<Authors>TidaSystems</Authors>
 		<PackageProjectUrl>https://tida.website</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/Tida-System/MailKit.Configuration</RepositoryUrl>
+		<RepositoryUrl>https://github.com/Tida-Systems/MailKit.Configuration</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
