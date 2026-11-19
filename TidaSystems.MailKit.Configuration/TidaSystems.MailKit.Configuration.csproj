@@ -13,7 +13,7 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<EnablePackageValidation>true</EnablePackageValidation>
-		<Authors>TidaSystems</Authors>
+		<Authors>Tida Systems</Authors>
 		<PackageProjectUrl>https://tida.website</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/Tida-Systems/MailKit.Configuration</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -23,8 +23,8 @@
 		<PackageId>TidaSystems.MailKit.Configuration</PackageId>
 		<Version>1.0.0</Version>
 		<Title>TidaSystems MailKit Configuration</Title>
-		<Authors>TidaSystems</Authors>
-		<Company>TidaSystems</Company>
+		<Authors>Tida Systems</Authors>
+		<Company>Tida Systems</Company>
 		<Description>Configuration-driven MailKit factories for SMTP, POP3, and IMAP with dependency injection, named sender profiles, automatic reload, and Native AOT compatibility.</Description>
 		<PackageTags>MailKit;MimeKit;SMTP;POP3;IMAP;Email;Configuration;DependencyInjection;NativeAOT;TLS;OAuth2</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
